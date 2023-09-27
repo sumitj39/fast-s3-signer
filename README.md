@@ -1,8 +1,8 @@
 # fast-s3-signer
-Custom S3 URL signer that is 10-50x faster than boto3 signer.
+Custom S3 URL signer written in Python that is 10-50x faster than boto3 signer. It has zero library dependencies.
 
 ## Installation
-It's a single file python file, you can copy paste it into your project and modify if needed.
+It's a single file python file, you can copy paste it into your project and modify as needed.
 
 ## Usage
 ```python
