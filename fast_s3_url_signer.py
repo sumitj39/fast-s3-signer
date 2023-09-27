@@ -19,10 +19,10 @@ class FastS3UrlSigner:
         self.access_key = access_key
         self.secret_key = secret_key
 
-    def get_signed_url(self, bucket_name: str, object_key: str, expiry_in_seconds=9000):
+    def generate_signed_url(self, bucket_name: str, object_key: str, expiry_in_seconds=3600):
         return self.__get_presigned_url(bucket_name=bucket_name, object_key=object_key, method_name='GET', expiry_in_seconds=expiry_in_seconds)
 
-    def generate_signed_put_url(self, bucket_name: str, object_key: str, expiry_in_seconds=9000):
+    def generate_signed_put_url(self, bucket_name: str, object_key: str, expiry_in_seconds=3600):
         return self.__get_presigned_url(bucket_name=bucket_name, object_key=object_key, method_name='PUT', expiry_in_seconds=expiry_in_seconds)
 
     def __get_host(self, bucket_name, region):
